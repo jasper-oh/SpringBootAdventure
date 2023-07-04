@@ -16,6 +16,23 @@ public class Article {
     @Column(name="content", nullable = false)
     private String content;
 
+
+    /**
+     * Builder Annotation : Lombok provide this annotation.
+     * If we use this annotation above the constructor, we can create the object by the builder pattern.
+     *
+     * Builder pattern -> One of the design pattern
+     * Short Description of Builder Pattern :
+     *
+     * new Article("ABC","def") -> if we didn't use builder pattern
+     *
+     * Article.builder()
+     *          .title("ABC")
+     *          .content("def")   -> If we use builder pattern
+     *          .build()
+     * @param title
+     * @param content
+     */
     @Builder
     public Article(String title, String content){
         this.title = title;
